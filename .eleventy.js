@@ -25,18 +25,6 @@ module.exports = function (eleventyConfig) {
   // Load the RSS plugin
   eleventyConfig.addPlugin(pluginRss);
 
-  // Adds Next & Previous links to the bottom of our blog posts
-  eleventyConfig.addCollection("posts", function (collection) {
-    const coll = collection.getFilteredByTag("posts");
-    for (let i = 0; i < coll.length; i++) {
-      const prevPost = coll[i - 1];
-      const nextPost = coll[i + 1];
-      coll[i].data["prevPost"] = prevPost;
-      coll[i].data["nextPost"] = nextPost;
-    }
-    return coll;
-  });
-
   eleventyConfig.addCollection("gallery", () => {
     const galleryPath = path.resolve(__dirname, "./src/images/gallery");
     const files = fs.readdirSync(galleryPath);
@@ -61,13 +49,6 @@ module.exports = function (eleventyConfig) {
         src: `./images/commissions/${file}`,
       };  // Array<{name: "Image name", src: "/image.jpg"}>
     });
-  });
-
-  // Add the filter "readableDate" to simplify the way blog dates are presented in the Archives page
-  eleventyConfig.addFilter('readableDate', (dateObj) => {
-    return DateTime.fromJSDate(dateObj, { zone: 'utc+9' }).toFormat(
-      'yyyy-LL-dd'
-    );
   });
 
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
