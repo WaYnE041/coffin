@@ -4,3 +4,5 @@ web_modules
 .cache
 .config
 readme.txt
+gh-pages
+gh-pages.pub
