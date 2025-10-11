@@ -70,13 +70,6 @@ module.exports = function (eleventyConfig) {
     );
   });
 
-  // Add the filter "topDate" to simplify the way blog dates are presented at the top of blog posts
-  eleventyConfig.addFilter('topDate', (dateObj) => {
-    return DateTime.fromJSDate(dateObj, { zone: 'utc+9' }).toFormat(
-      'yyyy LLLL dd'
-    );
-  });
-
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
   // These are the folders that Eleventy will use. "src" is where you edit files that Eleventy will then take in and export into "public," which you upload.
