@@ -1,11 +1,3 @@
-const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
-
-// Tells Eleventy to look for Luxon
-const { DateTime } = require('luxon');
-
-// Tells Eleventy to look for the RSS plugin
-const pluginRss = require("@11ty/eleventy-plugin-rss");
-
 const fs = require("fs");
 const path = require("path");
 
@@ -21,9 +13,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget("./src/images/");
   eleventyConfig.addPassthroughCopy("./src/fonts");
   eleventyConfig.addWatchTarget("./src/fonts");
-
-  // Load the RSS plugin
-  eleventyConfig.addPlugin(pluginRss);
 
   eleventyConfig.addCollection("gallery", () => {
     const galleryPath = path.resolve(__dirname, "./src/images/gallery");
@@ -50,8 +39,6 @@ module.exports = function (eleventyConfig) {
       };  // Array<{name: "Image name", src: "/image.jpg"}>
     });
   });
-
-  eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
   // These are the folders that Eleventy will use. "src" is where you edit files that Eleventy will then take in and export into "public," which you upload.
   return {
