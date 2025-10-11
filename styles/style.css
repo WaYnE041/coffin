@@ -1,0 +1,276 @@
+@font-face {
+  font-family: 'Special Gothic Expanded One';
+  font-display: swap;
+  src: url("../fonts/SpecialGothicExpandedOne-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Special Gothic Condensed One';
+  font-display: swap;
+  src: url("../fonts/SpecialGothicCondensedOne-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Bebas Neue';
+  font-display: swap;
+  src: url("../fonts/BebasNeue-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Cal Sans';
+  font-display: swap;
+  src: url("../fonts/CalSans-Regular.ttf") format("truetype");
+}
+
+:root {
+  --coolor-1: #efe9f4;
+  --cooler-2: #171d1c;
+  --cooler-3: #2bdc41;
+  --cooler-4: #2bdc41;
+  --cooler-5: #2bdc41;
+
+  --site-header-font: 'Special Gothic Expanded One', sans-serif;
+  --site-subheader-font: 'Special Gothic Condensed One', sans-serif;
+  --site-nav-font: 'Bebas Neue', sans-serif;
+  --site-font: 'Cal Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #5a1c7d;
+  font-family: var(--site-font);
+  color: var(--coolor-1);
+}
+
+#container {
+  max-width: 800px;
+  margin: 3em auto;
+  width: 90%;
+}
+
+/* Common Classes -------------------------------------- */
+a, a:visited {
+  color: var(--cooler-3);
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: var(--cooler-3);
+  color: var(--coolor-1);
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5 {
+  color: var(--cooler-4);
+  font-family: var(--site-header-font);
+  text-transform: uppercase;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
+
+ul.none {
+    padding: 0;
+    list-style-type: none;
+}
+
+button {
+  font-family: var(--site-header-font);
+}
+
+/* Site Areas -------------------------------------- */
+
+#navbar {
+  font-family: var(--site-nav-font);
+  background-color: var(--cooler-2);
+  margin-bottom: 1rem;
+  width: 100%;
+  border-radius: 1rem;
+}
+
+#navbar ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  place-items: center;
+}
+
+#navbar li {
+  padding: 5px 0px;
+  font-size: 1.2em;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+#flex {
+  display: flex;
+  background-color: var(--cooler-2);
+  border-radius: 1rem;
+}
+
+article {
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 10px 5% 20px 5%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  place-items: center;
+  gap: 30px;
+  padding: .5rem
+}
+
+/* lightbox */
+.lightbox {
+    width: 500px;
+    height: 500px;
+    object-fit: contain;
+    border-radius: 0%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.overlay_style {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+/* Home Page-------------------------------------- */
+.headshot {
+border: 4px solid #2bdc41;  
+border-radius: 1rem;
+}
+
+.headshot img {
+  padding: .5rem;
+  border-radius: 1rem;
+  margin: 0;
+}
+
+.card {
+  display: grid;
+  width: 100%;
+  height: 100%;
+}
+
+.card .card-header {
+  background-color: #5a1c7d;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.card .card-content {
+  text-align: center;
+  padding: 10px;
+  border-radius: 0 0 1rem 1rem;
+  border: 4px solid #5a1c7d; 
+}
+
+.card h3
+{
+  text-align: center;
+  color: #fff;
+  border-radius: 0 0 1rem 1rem;
+}
+
+/* Gallery Page-------------------------------------- */
+.gallery { /* Lightbox */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  border: 4px solid #5a1c7d;
+  border-radius: 1rem;
+}
+
+.gallery img {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.gallery img:hover {
+  box-shadow: 0 0 20px #5a1c7d;
+  filter: brightness(75%);
+} 
+
+/* Comms Page-------------------------------------- */
+.comms {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  gap: 30px;
+}
+
+.comms > .package {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;  
+}
+
+.comms .card {
+  grid-column: span 2;
+}
+
+.comms img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* Contact Page-------------------------------------- */
+.contact-form {
+  border: 4px solid #5a1c7d;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 45px;
+  text-align: center;
+  width: 100%;
+}
+
+.contact-form h3 {
+  margin-top: 0;
+}
+
+.contact-form input,
+.contact-form textarea
+ {
+  outline: 0;
+  background: #f4f0f0;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+}
+
+.contact-form button {
+  background-color: #2bdc41;
+  text-transform: uppercase;
+  outline: 0;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+.contact-form button:hover, 
+.contact-form button:active,
+.contact-form button:focus 
+{
+  background-color: #29bc3a;
+}

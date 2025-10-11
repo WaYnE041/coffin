@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>LivImagines: Contact</title>
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <link href="https://sun-beams.neocities.org/rss.xml" rel="alternate" type="application/rss+xml" title="RSS feed for My Cool Blog">
+    <link href="styles/style.css" rel="stylesheet" type="text/css" media="all">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Home for the Personal Website of LivImagines">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Contact">
+    <meta property="og:url" content="https://sun-beams.neocities.org/contact.html">
+    <meta property="og:image" content="https://sun-beams.neocities.org/images/favicon.png">
+    <meta property="og:description" content="More cool sites!">
+  </head>
+  
+  <body>
+    <main id="container">
+
+      <header id="headerArea">
+    <!--If you wanted to put in a header image, this is where you would do it-->
+    <h1>LivImagines</h1>
+    <nav id="navbar">
+        <!--This is where you edit the navbar links at the top of the page-->
+        <ul>
+            <li>
+                <a href="./index.html">Home</a>
+            </li>
+            <li>
+                <a href="./gallery.html">Gallery</a>
+            </li>
+            <li>
+                <a href="./comms.html">Rates</a>
+            </li>
+            <li>
+                <a href="./contact.html">Contact</a>
+            </li>
+        </ul>
+        
+    </nav>
+</header>
+
+      <!--This is where the bulk of your page lives-->
+      <div id="flex">
+        <article>
+          <h2>Contact</h2>
+          <div class="contact-form">
+    <div class="contact-info">
+        <h3>I'd love to hear from you,<br/>
+            leave your info to get in contact with me!
+        </h3>
+    </div>
+    <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="333fd6ff-7aba-4747-a3e2-ef1262f2f526">
+        <label for="first" class="form-label">First Name</label><br>
+        <input type="text" name="first" required><br>
+        <label for="last" class="form-label">Last Name</label><br>
+        <input type="text" name="last" required><br>
+        <label for="email" class="form-label">Email</label><br>
+        <input type="email" name="email" required><br>
+        <label for="message" class="form-label">Message</label><br>
+        <textarea name="message" required></textarea><br>
+        <input type="hidden" name="redirect" value="https://web3forms.com/success">
+        <button type="submit">Submit</button>
+    </form>
+</div>
+        </article>
+      </div>
+
+    </main>
+
+  </body>
+</html>
