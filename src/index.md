@@ -9,7 +9,7 @@ relative_prefix: ./
 
 <div class="grid">
     <div class="headshot">
-        <img src="./images/liv-headshot.JPG" alt="liv headshot" />
+        <img src="./images/liv-headshot.jpg" alt="liv headshot" />
     </div>
     <div class="card">
         <div class="card-header">
