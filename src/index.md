@@ -4,7 +4,6 @@ permalink: index.html
 title: Home
 description: Home for the Personal Website of LivImagines
 featured_image: favicon.png
-relative_prefix: ./
 ---
 
 <div class="grid">

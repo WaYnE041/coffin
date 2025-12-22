@@ -4,7 +4,6 @@ permalink: contact.html
 title: Contact
 description: More cool sites!
 featured_image: favicon.png
-relative_prefix: ./
 ---
 
 <div class="contact-form">

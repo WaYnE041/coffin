@@ -4,7 +4,6 @@ permalink: gallery.html
 title: Gallery
 description: My photography projects!
 featured_image: favicon.png
-relative_prefix: ./
 ---
 
 <div class="grid gallery">

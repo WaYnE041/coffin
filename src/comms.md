@@ -4,7 +4,6 @@ permalink: comms.html
 title: Commission Rates
 description: More cool sites!
 featured_image: favicon.png
-relative_prefix: ./
 ---
 
 <div class="comms"> 
