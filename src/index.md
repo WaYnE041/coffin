@@ -1,6 +1,5 @@
 ---
 layout: base.njk
-permalink: "{{ page.fileSlug }}.html"
 title: Home
 description: Home for the Personal Website of LivImagines
 featured_image: favicon.png
