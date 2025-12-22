@@ -1,8 +1,8 @@
 ---
 layout: base.njk
-permalink: contact.html
+permalink: "{{ page.fileSlug }}.html"
 title: Contact
-description: More cool sites!
+description: My contact information
 featured_image: favicon.png
 ---
 

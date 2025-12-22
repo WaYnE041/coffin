@@ -6,13 +6,17 @@ module.exports = function (eleventyConfig) {
   // Edit these to include your images, CSS, and other folders and files that you want to copy over to your public folder.
   eleventyConfig.addPassthroughCopy("./src/styles");
   eleventyConfig.addWatchTarget("./src/styles/");
+
   eleventyConfig.addPassthroughCopy("./src/scripts");
   eleventyConfig.addWatchTarget("./src/scripts/");
 
   eleventyConfig.addPassthroughCopy("./src/images");
   eleventyConfig.addWatchTarget("./src/images/");
+
   eleventyConfig.addPassthroughCopy("./src/fonts");
   eleventyConfig.addWatchTarget("./src/fonts");
+
+  eleventyConfig.addPassthroughCopy("./src/.htaccess");
 
   eleventyConfig.addCollection("gallery", () => {
     const galleryPath = path.resolve(__dirname, "./src/images/gallery");

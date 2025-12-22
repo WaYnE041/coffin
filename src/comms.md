@@ -1,8 +1,8 @@
 ---
 layout: base.njk
-permalink: comms.html
+permalink: "{{ page.fileSlug }}.html"
 title: Commission Rates
-description: More cool sites!
+description: My commision rates
 featured_image: favicon.png
 ---
 

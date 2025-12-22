@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-permalink: gallery.html
+permalink: "{{ page.fileSlug }}.html"
 title: Gallery
 description: My photography projects!
 featured_image: favicon.png
